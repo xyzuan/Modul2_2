@@ -25,9 +25,6 @@ public class HitungOOP {
      */
     private final int[] belahKetupat = new int[3];
 
-    // Belah Ketupat Result Attribute
-    private double Luas, Keliling;
-
     // mainBelahKetupat & Scanner Obj
     Ketupat mainKetupat = new Ketupat();
     Scanner input = new Scanner(System.in);
@@ -42,19 +39,15 @@ public class HitungOOP {
         switch (params) {
             // Case 1 are assigned for Luas Operation
             case 1 -> {
-                System.out.print("\nMasukkan Diagonal-1 : ");
-                setBelahKetupat(0,input.nextInt());
-                System.out.print("Masukkan Diagonal-2 : ");
-                setBelahKetupat(1,input.nextInt());
+                System.out.print("\nMasukkan Diagonal-1 : "); setBelahKetupat(0,input.nextInt());
+                System.out.print("Masukkan Diagonal-2 : "); setBelahKetupat(1,input.nextInt());
                 hitungLuas(getBelahKetupat(0), getBelahKetupat(1));
-                System.out.println("\nLuas belah ketupat : " + getLuas());
             }
             // Case 2 are assigned for Keliling Operation
             case 2 -> {
-                System.out.print("\nMasukkan Sisi : ");
-                setBelahKetupat(2,input.nextInt());
+                System.out.print("\nMasukkan Sisi : "); setBelahKetupat(2,input.nextInt());
                 hitungKeliling(getBelahKetupat(2));
-                System.out.println("\nKeliling belah ketupat : " + getKeliling());
+
             }
             default -> System.out.println("Inputan Salah");
         }
@@ -63,25 +56,17 @@ public class HitungOOP {
 
     // Belah Ketupat Luas & Keliling Operation
     public void hitungLuas(int params1, int params2){
-        this.Luas = params1 * params2 * 0.5;
+        System.out.println("\nLuas belah ketupat : " + ( params1 * params2 * 0.5 ));
     }
     public void hitungKeliling(int params){
-        this.Keliling = 4 * params;
-    }
-
-    // Getter Luas & Keliling
-    public double getLuas(){
-        return Luas;
-    }
-    public double getKeliling(){
-        return Keliling;
+        System.out.println("\nKeliling belah ketupat : " + ( 4 * params ));
     }
 
     // Getter Setter Belah Ketupat
-    public int getBelahKetupat(int arr) {
+    public int getBelahKetupat(int arr){
         return belahKetupat[arr];
     }
-    public void setBelahKetupat(int arr, int params) {
+    public void setBelahKetupat(int arr, int params){
         this.belahKetupat[arr] = params;
     }
 

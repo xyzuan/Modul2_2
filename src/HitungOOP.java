@@ -23,7 +23,7 @@ public class HitungOOP {
        [1] are assigned for D2 ( Diagonal 2 )
        [2] are assigned for Sisi
      */
-    private final int[] belahKetupat = new int[3];
+    private final double[] belahKetupat = new double[3];
 
     // mainBelahKetupat & Scanner Obj
     Ketupat mainKetupat = new Ketupat();
@@ -39,13 +39,13 @@ public class HitungOOP {
         switch (params) {
             // Case 1 are assigned for Luas Operation
             case 1 -> {
-                System.out.print("\nMasukkan Diagonal-1 : "); setBelahKetupat(0,input.nextInt());
-                System.out.print("Masukkan Diagonal-2 : "); setBelahKetupat(1,input.nextInt());
+                System.out.print("\nMasukkan Diagonal-1 : "); setBelahKetupat(0,input.nextDouble());
+                System.out.print("Masukkan Diagonal-2 : "); setBelahKetupat(1,input.nextDouble());
                 hitungLuas(getBelahKetupat(0), getBelahKetupat(1));
             }
             // Case 2 are assigned for Keliling Operation
             case 2 -> {
-                System.out.print("\nMasukkan Sisi : "); setBelahKetupat(2,input.nextInt());
+                System.out.print("\nMasukkan Sisi : "); setBelahKetupat(2,input.nextDouble());
                 hitungKeliling(getBelahKetupat(2));
 
             }
@@ -55,18 +55,18 @@ public class HitungOOP {
     }
 
     // Belah Ketupat Luas & Keliling Operation
-    public void hitungLuas(int params1, int params2){
+    public void hitungLuas(double params1, double params2){
         System.out.println("\nLuas belah ketupat : " + ( params1 * params2 * 0.5 ));
     }
-    public void hitungKeliling(int params){
+    public void hitungKeliling(double params){
         System.out.println("\nKeliling belah ketupat : " + ( 4 * params ));
     }
 
     // Getter Setter Belah Ketupat
-    public int getBelahKetupat(int arr){
+    public double getBelahKetupat(int arr){
         return belahKetupat[arr];
     }
-    public void setBelahKetupat(int arr, int params){
+    public void setBelahKetupat(int arr, double params){
         this.belahKetupat[arr] = params;
     }
 

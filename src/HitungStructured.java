@@ -33,13 +33,13 @@ public class HitungStructured {
         switch (params) {
             // Case 1 are assigned for Luas Operation
             case 1 -> {
-                System.out.print("\nMasukkan Diagonal-1 : "); int d1 = input.nextInt();
-                System.out.print("Masukkan Diagonal-2 : "); int d2 = input.nextInt();
+                System.out.print("\nMasukkan Diagonal-1 : "); double d1 = input.nextDouble();
+                System.out.print("Masukkan Diagonal-2 : "); double d2 = input.nextDouble();
                 System.out.println("\nLuas belah ketupat : " + ( d1 * d2 * 0.5 ));
             }
             // Case 2 are assigned for Keliling Operation
             case 2 -> {
-                System.out.print("\nMasukkan Sisi : "); int sisi = input.nextInt();
+                System.out.print("\nMasukkan Sisi : "); double sisi = input.nextDouble();
                 System.out.println("\nKeliling belah ketupat : " + ( 4 * sisi));
             }
             default -> System.out.println("Inputan Salah");
